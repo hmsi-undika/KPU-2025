@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Pemilu KAHIMA SI 2025</title>
+    <style>
+        /* Theme Variables */
+        :root {
+            --color-bg-base: #0f172a;
+            --color-bg-elevated: #020617;
+            --color-bg-surface: #1e293b;
+            --color-bg-muted: #334155;
+            --color-text-primary: #f1f5f9;
+            --color-text-secondary: #cbd5e1;
+            --color-text-muted: #94a3b8;
+            --color-text-accent: #38bdf8;
+            --color-primary: #38bdf8;
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.4;
+            overflow-x: hidden;
+        }
+
+        /* Slide Container */
+        .slide {
+            width: 960px;
+            height: 540px;
+            margin: 0 auto 20px;
+            display: flex;
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Layout Utilities */
+        .row { flex-direction: row; }
+        .col { flex-direction: column; }
+        .center {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .space-between { justify-content: space-between; }
+        .items-center { align-items: center; }
+        .items-start { align-items: flex-start; }
+        .fill-width { flex: 1; }
+
+        /* Spacing */
+        .gap-sm { gap: 0.5rem; }
+        .gap-md { gap: 1rem; }
+        .gap-lg { gap: 1.5rem; }
+        .gap-xl { gap: 2rem; }
+
+        .p-4 { padding: 1rem; }
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .p-12 { padding: 3rem; }
+        .p-16 { padding: 4rem; }
+
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+
+        .mt-2 { margin-top: 0.5rem; }
+        .mt-4 { margin-top: 1rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .mt-8 { margin-top: 2rem; }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: Arial, sans-serif;
+            font-weight: 600;
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        h1 { font-size: 3rem; }
+        h2 { font-size: 2.25rem; }
+        h3 { font-size: 1.75rem; }
+        h4 { font-size: 1.5rem; }
+
+        .text-lg { font-size: 1.125rem; }
+        .text-xl { font-size: 1.25rem; }
+        .text-2xl { font-size: 1.5rem; }
+        .text-3xl { font-size: 1.875rem; }
+        .text-4xl { font-size: 2.25rem; }
+        .text-5xl { font-size: 3rem; }
+
+        .font-bold { font-weight: 700; }
+        .font-semibold { font-weight: 600; }
+
+        .text-center { text-align: center; }
+
+        /* Card Styles */
+        .card-rect {
+            padding: 2rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background-color: #334155;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 0.5rem 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: #38bdf8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0f172a;
+            font-weight: bold;
+            transition: width 0.3s ease;
+        }
+
+        /* Table Styles */
+        .table-container {
+            width: 100%;
+            color: #cbd5e1;
+        }
+
+        .table-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-container th {
+            background-color: #38bdf8;
+            color: #0f172a;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .table-container td {
+            padding: 12px;
+            border-bottom: 1px solid #334155;
+        }
+
+        .table-container tr:hover {
+            background-color: #1e293b;
+        }
+    </style>
+</head>
+<body style="background-color: #0f172a; color: #f1f5f9;">
+
+    <!-- Slide 1: Title Slide -->
+    <section class="slide p-16 col center" style="background-color: #020617;">
+        <h1 class="text-5xl mb-4" style="color: #38bdf8;">Hasil Pemilu KAHIMA SI</h1>
+        <p class="text-2xl" style="color: #cbd5e1;">Periode 2025</p>
+        <p class="text-lg mt-8" style="color: #94a3b8;">Universitas Dinamika</p>
+        <p class="text-sm mt-4" style="color: #94a3b8;">3 Desember 2024</p>
+    </section>
+
+    <!-- Slide 2: Metodologi Perhitungan -->
+    <section class="slide p-16 col" style="background-color: #0f172a;">
+        <h2 class="mb-6" style="color: #38bdf8;">Metodologi Perhitungan</h2>
+        <div class="fill-width">
+            <div style="background-color: #1e293b; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
+                <p class="text-lg" style="color: #f1f5f9;"><strong>80% - Pemungutan Suara</strong></p>
+                <p style="color: #cbd5e1;">Hasil voting langsung dari mahasiswa S1 Sistem Informasi</p>
+            </div>
+            <div style="background-color: #1e293b; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
+                <p class="text-lg" style="color: #f1f5f9;"><strong>20% - Poin Perwawancara</strong></p>
+                <p style="color: #cbd5e1;">Total poin dari 3 pewawancara untuk setiap pasangan calon</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 3: Hasil Pemungutan Suara -->
+    <section class="slide p-16 col" style="background-color: #0f172a;">
+        <h2 class="mb-4" style="color: #38bdf8;">Hasil Pemungutan Suara (80%)</h2>
+        <p style="color: #cbd5e1; margin-bottom: 1rem;">Total Pemilih: <strong>208 orang</strong></p>
+        <div class="fill-width" style="display: flex; flex-direction: column; gap: 1rem;">
+            <div>
+                <p style="color: #f1f5f9; margin-bottom: 0.5rem;"><strong>1. Farel Endra & Refa</strong></p>
+                <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 0.3rem;">97 suara (46.63%)</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 46.63%; background-color: #10b981;">97 suara</div>
+                </div>
+            </div>
+            <div>
+                <p style="color: #f1f5f9; margin-bottom: 0.5rem;"><strong>2. Yovant & Abisai</strong></p>
+                <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 0.3rem;">68 suara (32.69%)</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 32.69%; background-color: #f59e0b;">68 suara</div>
+                </div>
+            </div>
+            <div>
+                <p style="color: #f1f5f9; margin-bottom: 0.5rem;"><strong>3. Farel Dimas & Moreno Timothy</strong></p>
+                <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 0.3rem;">43 suara (20.67%)</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 20.67%; background-color: #ef4444;">43 suara</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 4: Skor Perwawancara -->
+    <section class="slide p-16 col" style="background-color: #0f172a;">
+        <h2 class="mb-6" style="color: #38bdf8;">Poin Perwawancara (20%)</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pasangan Calon</th>
+                        <th>Total Poin</th>
+                        <th>Persentase</th>
+                        <th>Skor 20%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Yovant & Abisai</td>
+                        <td>14/15</td>
+                        <td>93.33%</td>
+                        <td style="color: #10b981; font-weight: bold;">18.67</td>
+                    </tr>
+                    <tr>
+                        <td>Farel Endra & Refa</td>
+                        <td>12/15</td>
+                        <td>80.00%</td>
+                        <td style="color: #f59e0b; font-weight: bold;">16.00</td>
+                    </tr>
+                    <tr>
+                        <td>Farel Dimas & Moreno Timothy</td>
+                        <td>12/15</td>
+                        <td>80.00%</td>
+                        <td style="color: #ef4444; font-weight: bold;">16.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Slide 5: Perbandingan Komponen Skor -->
+    <section class="slide p-16 col" style="background-color: #0f172a;">
+        <h2 class="mb-6" style="color: #38bdf8;">Perbandingan Komponen Skor</h2>
+        <div class="fill-width" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div style="background-color: #1e293b; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
+                <p style="color: #38bdf8; font-size: 0.9rem; margin-bottom: 0.5rem;">Farel Endra & Refa</p>
+                <p style="color: #f1f5f9; font-size: 1.1rem; margin-bottom: 0.3rem;"><strong>Voting 80%:</strong> <span style="color: #10b981;">37.31</span></p>
+                <p style="color: #f1f5f9; font-size: 1.1rem;"><strong>Perwawancara 20%:</strong> <span style="color: #f59e0b;">16.00</span></p>
+            </div>
+            <div style="background-color: #1e293b; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
+                <p style="color: #38bdf8; font-size: 0.9rem; margin-bottom: 0.5rem;">Yovant & Abisai</p>
+                <p style="color: #f1f5f9; font-size: 1.1rem; margin-bottom: 0.3rem;"><strong>Voting 80%:</strong> <span style="color: #10b981;">26.15</span></p>
+                <p style="color: #f1f5f9; font-size: 1.1rem;"><strong>Perwawancara 20%:</strong> <span style="color: #f59e0b;">18.67</span></p>
+            </div>
+            <div style="background-color: #1e293b; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
+                <p style="color: #38bdf8; font-size: 0.9rem; margin-bottom: 0.5rem;">Farel Dimas & Moreno Timothy</p>
+                <p style="color: #f1f5f9; font-size: 1.1rem; margin-bottom: 0.3rem;"><strong>Voting 80%:</strong> <span style="color: #10b981;">16.54</span></p>
+                <p style="color: #f1f5f9; font-size: 1.1rem;"><strong>Perwawancara 20%:</strong> <span style="color: #f59e0b;">16.00</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 6: Skor Total dan Ranking -->
+    <section class="slide p-16 col" style="background-color: #0f172a;">
+        <h2 class="mb-6" style="color: #38bdf8;">Skor Total (80% + 20%)</h2>
+        <div class="fill-width" style="display: flex; flex-direction: column; gap: 1.2rem; justify-content: center;">
+            <div style="background-color: #1e293b; padding: 1.5rem; border-left: 4px solid #10b981; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <p style="color: #94a3b8; font-size: 0.9rem;">🥇 PEMENANG</p>
+                        <p style="color: #f1f5f9; font-size: 1.2rem; font-weight: bold;">Farel Endra & Refa</p>
+                    </div>
+                    <p style="color: #10b981; font-size: 2rem; font-weight: bold;">53.31</p>
+                </div>
+            </div>
+            <div style="background-color: #1e293b; padding: 1.5rem; border-left: 4px solid #f59e0b; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <p style="color: #94a3b8; font-size: 0.9rem;">🥈 RUNNER UP</p>
+                        <p style="color: #f1f5f9; font-size: 1.2rem; font-weight: bold;">Yovant & Abisai</p>
+                    </div>
+                    <p style="color: #f59e0b; font-size: 2rem; font-weight: bold;">44.82</p>
+                </div>
+            </div>
+            <div style="background-color: #1e293b; padding: 1.5rem; border-left: 4px solid #ef4444; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <p style="color: #94a3b8; font-size: 0.9rem;">🥉 KETIGA</p>
+                        <p style="color: #f1f5f9; font-size: 1.2rem; font-weight: bold;">Farel Dimas & Moreno Timothy</p>
+                    </div>
+                    <p style="color: #ef4444; font-size: 2rem; font-weight: bold;">32.54</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 7: Closing Slide -->
+    <section class="slide p-16 col center" style="background-color: #020617;">
+        <h1 class="text-5xl mb-6" style="color: #10b981;">🏆 Selamat!</h1>
+        <h2 class="text-3xl mb-8" style="color: #38bdf8;">Farel Endra & Refa</h2>
+        <p class="text-xl" style="color: #cbd5e1;">Terpilih menjadi Ketua dan Wakil Ketua</p>
+        <p class="text-lg mt-6" style="color: #cbd5e1;">Himpunan Mahasiswa S1 Sistem Informasi</p>
+        <p class="text-sm mt-8" style="color: #94a3b8;">Periode 2025</p>
+    </section>
+
+</body>
+</html>
