@@ -23,8 +23,8 @@
         }
 
         html {
-            scroll-behavior: smooth; /* Kunci untuk scroll halus */
-            scroll-padding-top: 100px; /* Jarak agar tertutup navbar saat jump */
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -59,7 +59,7 @@
         }
 
         .nav-container {
-            width: 960px; /* Match slide width */
+            width: 960px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -95,7 +95,7 @@
 
         /* --- SLIDE BASE --- */
         .container {
-            margin-top: 100px; /* Space for navbar */
+            margin-top: 100px;
             margin-bottom: 40px;
         }
 
@@ -114,7 +114,6 @@
             display: flex;
             flex-direction: column;
             padding: 3rem 4rem;
-            /* Animation removed from base class to handle visibility better with IDs */
         }
 
         /* --- TYPOGRAPHY --- */
@@ -145,7 +144,7 @@
             height: 100%;
             border-radius: 10px;
             position: relative;
-            width: var(--w); /* Direct width without animation for correct anchoring display */
+            width: var(--w);
         }
 
         /* Table */
@@ -292,7 +291,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#intro" class="nav-logo">
-                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/ebfd2939-d4e7-429c-8d29-e35e792797a1" alt="Logo" style="height: 30px;">
+                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/ebfd2939-d4e7-429c-8d29-e35e792797a1" alt="Logo" style="height: 35px;">
                 HMSI 2025
             </a>
             <div class="nav-links">
@@ -352,11 +351,11 @@
 
             <div class="bar-container">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;">
-                    <strong>1. Farel Endra & Refa</strong>
-                    <span style="color: var(--accent-green);">97 Suara (46.63%)</span>
+                    <strong>1. Farel Dimas & Moreno</strong>
+                    <span style="color: var(--accent-red);">43 Suara (20.67%)</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" style="background: var(--accent-green); --w: 46.63%; box-shadow: 0 0 15px var(--accent-green);"></div>
+                    <div class="progress-fill" style="background: var(--accent-red); --w: 20.67%;"></div>
                 </div>
             </div>
 
@@ -372,11 +371,11 @@
 
             <div class="bar-container">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;">
-                    <strong>3. Farel Dimas & Moreno</strong>
-                    <span style="color: var(--accent-red);">43 Suara (20.67%)</span>
+                    <strong>3. Farel Endra & Refa</strong>
+                    <span style="color: var(--accent-green);">97 Suara (46.63%)</span>
                 </div>
                 <div class="progress-track">
-                    <div class="progress-fill" style="background: var(--accent-red); --w: 20.67%;"></div>
+                    <div class="progress-fill" style="background: var(--accent-green); --w: 46.63%; box-shadow: 0 0 15px var(--accent-green);"></div>
                 </div>
             </div>
         </section>
@@ -394,10 +393,10 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1. Farel Endra & Refa</td>
+                        <td>1. Farel Dimas & Moreno</td>
                         <td style="color: var(--text-main);">227 / 300</td>
                         <td>75.67%</td>
-                        <td style="color: var(--primary); font-weight: bold; font-size: 1.2rem;">15.13</td>
+                        <td style="color: var(--accent-red); font-weight: bold; font-size: 1.2rem;">15.13</td>
                     </tr>
                     <tr>
                         <td>2. Yovant & Abisai</td>
@@ -406,20 +405,25 @@
                         <td style="color: var(--accent-gold); font-weight: bold; font-size: 1.2rem;">15.80</td>
                     </tr>
                     <tr>
-                        <td>3. Farel Dimas & Moreno</td>
+                        <td>3. Farel Endra & Refa</td>
                         <td style="color: var(--text-main);">235 / 300</td>
                         <td>78.33%</td>
-                        <td style="color: var(--accent-red); font-weight: bold; font-size: 1.2rem;">15.67</td>
+                        <td style="color: var(--primary); font-weight: bold; font-size: 1.2rem;">15.67</td>
                     </tr>
                 </tbody>
             </table>
             
-            <div style="margin-top: 2rem; background: rgba(56, 189, 248, 0.1); padding: 1rem; border-left: 4px solid var(--primary); border-radius: 0 8px 8px 0;">
-                <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
-                    <strong style="color: var(--primary);">Analisis Penilaian:</strong> Hasil di atas menunjukkan rata-rata akumulasi poin dari 3 pewawancara. 
-                    Efektivitas dihitung menggunakan formula <em>(Poin Mentah ÷ 300) × 100</em>. 
-                    Paslon nomor urut 2 memperoleh poin efektivitas tertinggi dalam sesi wawancara.
-                </p>
+            <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                <div style="flex: 1; background: rgba(56, 189, 248, 0.1); padding: 1rem; border-left: 4px solid var(--primary); border-radius: 0 8px 8px 0;">
+                    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
+                        <strong style="color: var(--primary);">Analisis Penilaian:</strong> Paslon no. 2 memperoleh efektivitas poin tertinggi (79.00%), diikuti oleh Paslon no. 3 dengan margin sangat tipis.
+                    </p>
+                </div>
+                <div style="flex: 1; background: rgba(255, 255, 255, 0.05); padding: 1rem; border-radius: 8px;">
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">Rumus Kalkulasi</p>
+                    <code style="font-family: monospace; color: var(--text-main); font-size: 1rem;">(Poin Mentah ÷ 300) × 20</code>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">Total poin dibagi poin maksimal, dikali bobot 20%.</p>
+                </div>
             </div>
         </section>
 
@@ -429,7 +433,7 @@
                 <div class="candidate-card podium-2">
                     <span class="badge" style="background: rgba(245, 158, 11, 0.2); color: var(--accent-gold);">RUNNER UP</span>
                     <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/fa3d3490-997c-4eca-86a4-2e04778f88b6" alt="Yovant">
-                    <h4 style="margin-bottom: 1rem;">Yovant & Abisai</h4>
+                    <h4 style="margin-bottom: 1rem;">2. Yovant & Abisai</h4>
                     <div style="width: 100%; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; margin-top: auto;">
                         <p style="font-size: 0.8rem; color: var(--text-muted);">Voting: 26.15 + Wwc: 15.80</p>
                         <p style="font-size: 2rem; font-weight: 700; color: var(--accent-gold);">41.95</p>
@@ -439,20 +443,20 @@
                 <div class="candidate-card podium-1">
                     <span class="badge" style="background: rgba(16, 185, 129, 0.2); color: var(--accent-green); border: 1px solid var(--accent-green);">WINNER</span>
                     <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/4056eb2e-bfa9-4f2f-8a0d-5de2b2c9a940" alt="Farel">
-                    <h3 style="margin-bottom: 1rem; font-size: 1.3rem;">Farel Endra & Refa</h3>
+                    <h3 style="margin-bottom: 1rem; font-size: 1.3rem;">3. Farel Endra & Refa</h3>
                     <div style="width: 100%; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; margin-top: auto;">
-                        <p style="font-size: 0.8rem; color: var(--text-muted);">Voting: 37.31 + Wwc: 15.13</p>
-                        <p style="font-size: 2.5rem; font-weight: 800; color: var(--accent-green); text-shadow: 0 0 20px rgba(16, 185, 129, 0.4);">52.44</p>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">Voting: 37.31 + Wwc: 15.67</p>
+                        <p style="font-size: 2.5rem; font-weight: 800; color: var(--accent-green); text-shadow: 0 0 20px rgba(16, 185, 129, 0.4);">52.97</p>
                     </div>
                 </div>
 
                 <div class="candidate-card podium-3">
                     <span class="badge" style="background: rgba(239, 68, 68, 0.2); color: var(--accent-red);">3RD PLACE</span>
                     <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/3bacd5ce-d9bd-4ec3-9999-c626d9a6195c" alt="Moreno">
-                    <h4 style="margin-bottom: 1rem;">Farel & Moreno</h4>
+                    <h4 style="margin-bottom: 1rem;">1. Farel & Moreno</h4>
                     <div style="width: 100%; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; margin-top: auto;">
-                        <p style="font-size: 0.8rem; color: var(--text-muted);">Voting: 16.54 + Wwc: 15.67</p>
-                        <p style="font-size: 2rem; font-weight: 700; color: var(--accent-red);">32.21</p>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">Voting: 16.54 + Wwc: 15.13</p>
+                        <p style="font-size: 2rem; font-weight: 700; color: var(--accent-red);">31.67</p>
                     </div>
                 </div>
             </div>
@@ -467,12 +471,12 @@
                 </div>
                 <div style="flex: 1.2; background: rgba(16, 185, 129, 0.2); border: 1px solid var(--accent-green); padding: 2rem; border-radius: 16px; text-align: center; transform: scale(1.1); box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);">
                     <p style="color: var(--accent-green); font-weight: 600; letter-spacing: 2px;">PEMENANG</p>
-                    <p style="font-size: 2.5rem; font-weight: 800;">52.44</p>
-                    <p style="font-size: 0.9rem;">Farel Endra & Refa</p>
+                    <p style="font-size: 2.5rem; font-weight: 800;">52.97</p>
+                    <p style="font-size: 0.9rem;">#3 Farel Endra & Refa</p>
                 </div>
                 <div style="flex: 1; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 16px; text-align: center;">
-                    <p style="color: var(--accent-red); font-weight: 600;">#3 Farel & Moreno</p>
-                    <p style="font-size: 2rem; font-weight: 700;">32.21</p>
+                    <p style="color: var(--accent-red); font-weight: 600;">#1 Farel & Moreno</p>
+                    <p style="font-size: 2rem; font-weight: 700;">31.67</p>
                 </div>
             </div>
         </section>
