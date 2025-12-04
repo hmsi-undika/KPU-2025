@@ -40,7 +40,7 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            overflow-x: hidden; /* Mencegah scroll horizontal body */
+            overflow-x: hidden;
         }
 
         /* --- NAVBAR --- */
@@ -93,13 +93,11 @@
             white-space: nowrap;
         }
 
-        .nav-links a:hover {
-            color: var(--primary);
-        }
+        .nav-links a:hover { color: var(--primary); }
 
         /* --- SLIDE BASE --- */
         .container {
-            margin-top: 80px; /* Space for navbar */
+            margin-top: 80px;
             margin-bottom: 40px;
             width: 100%;
             padding: 0 1rem;
@@ -111,7 +109,6 @@
         .slide {
             width: 100%;
             max-width: 960px;
-            /* Height auto agar fit konten di HP */
             min-height: 540px; 
             position: relative;
             background: var(--bg-card);
@@ -158,14 +155,9 @@
             width: var(--w);
         }
 
-        /* Table Responsive Wrapper */
-        .table-responsive {
-            width: 100%;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-        
-        table { width: 100%; border-collapse: separate; border-spacing: 0 8px; min-width: 600px; /* Force scroll on small screens */ }
+        /* Table Responsive */
+        .table-responsive { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        table { width: 100%; border-collapse: separate; border-spacing: 0 8px; min-width: 600px; }
         th { text-align: left; padding: 12px; color: var(--text-muted); font-weight: 500; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
         td { background: var(--bg-glass); padding: 16px; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); vertical-align: middle; }
         td:first-child { border-top-left-radius: 12px; border-bottom-left-radius: 12px; border-left: 1px solid rgba(255,255,255,0.05); color: #fff; font-weight: 600; }
@@ -205,47 +197,19 @@
         }
 
         /* Podium Styling */
-        .podium-1 { 
-            height: 100%; 
-            border: 1px solid rgba(16, 185, 129, 0.4);
-            box-shadow: 0 0 30px rgba(16, 185, 129, 0.1);
-            background: linear-gradient(180deg, rgba(16, 185, 129, 0.15) 0%, rgba(15, 23, 42, 0.8) 100%);
-            z-index: 2;
-        }
+        .podium-1 { height: 100%; border: 1px solid rgba(16, 185, 129, 0.4); box-shadow: 0 0 30px rgba(16, 185, 129, 0.1); background: linear-gradient(180deg, rgba(16, 185, 129, 0.15) 0%, rgba(15, 23, 42, 0.8) 100%); z-index: 2; }
         .podium-1 img { border-color: var(--accent-green); width: 120px; height: 120px; }
-        
-        .podium-2 { 
-            height: 90%; 
-            border: 1px solid rgba(245, 158, 11, 0.4);
-            background: linear-gradient(180deg, rgba(245, 158, 11, 0.15) 0%, rgba(15, 23, 42, 0.8) 100%);
-        }
+        .podium-2 { height: 90%; border: 1px solid rgba(245, 158, 11, 0.4); background: linear-gradient(180deg, rgba(245, 158, 11, 0.15) 0%, rgba(15, 23, 42, 0.8) 100%); }
         .podium-2 img { border-color: var(--accent-gold); }
-
-        .podium-3 { 
-            height: 85%; 
-            border: 1px solid rgba(239, 68, 68, 0.4);
-            background: linear-gradient(180deg, rgba(239, 68, 68, 0.15) 0%, rgba(15, 23, 42, 0.8) 100%);
-        }
+        .podium-3 { height: 85%; border: 1px solid rgba(239, 68, 68, 0.4); background: linear-gradient(180deg, rgba(239, 68, 68, 0.15) 0%, rgba(15, 23, 42, 0.8) 100%); }
         .podium-3 img { border-color: var(--accent-red); }
 
         /* Utility */
         .flex-col-center { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; height: 100%; width: 100%; }
-        .badge {
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-            display: inline-block;
-        }
-        .blob {
-            position: absolute;
-            filter: blur(80px);
-            z-index: 0;
-            opacity: 0.6;
-        }
+        .badge { padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px; display: inline-block; }
+        .blob { position: absolute; filter: blur(80px); z-index: 0; opacity: 0.6; }
+        
         .tag-source {
             display: inline-flex;
             align-items: center;
@@ -257,8 +221,7 @@
             font-size: 0.8rem;
             margin-top: 8px;
         }
-        
-        /* Button Style */
+
         .btn-link {
             display: inline-flex;
             align-items: center;
@@ -275,56 +238,28 @@
             margin-top: 1rem;
             text-align: center;
         }
-        .btn-link:hover {
-            background: var(--primary);
-            color: #020617;
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
-        }
+        .btn-link:hover { background: var(--primary); color: #020617; box-shadow: 0 0 15px rgba(56, 189, 248, 0.4); }
 
-        /* Summary Box */
         .summary-box { display: flex; width: 100%; gap: 1rem; }
         .summary-item { flex: 1; padding: 2rem; border-radius: 16px; text-align: center; }
 
+        /* Image Winner Style */
+        .winner-portrait {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+            margin-bottom: 1.5rem;
+            object-fit: contain;
+        }
+
         /* --- FOOTER --- */
-        .footer {
-            width: 100%;
-            background: #020617;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding: 2rem 0;
-            margin-top: 2rem;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .footer-container {
-            width: 100%;
-            max-width: 960px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 1rem;
-        }
-
-        .footer-info {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        .footer-socials {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .social-link {
-            color: var(--text-muted);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: color 0.3s;
-            font-size: 0.9rem;
-        }
-
+        .footer { width: 100%; background: #020617; border-top: 1px solid rgba(255,255,255,0.1); padding: 2rem 0; margin-top: 2rem; display: flex; justify-content: center; }
+        .footer-container { width: 100%; max-width: 960px; display: flex; justify-content: space-between; align-items: center; padding: 0 1rem; }
+        .footer-info { color: var(--text-muted); font-size: 0.9rem; }
+        .footer-socials { display: flex; gap: 1.5rem; }
+        .social-link { color: var(--text-muted); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.3s; font-size: 0.9rem; }
         .social-link:hover { color: var(--primary); }
         .social-link svg { width: 20px; height: 20px; fill: currentColor; }
 
@@ -336,32 +271,22 @@
             
             .navbar { padding: 0.5rem 1rem; }
             .nav-container { flex-direction: column; gap: 10px; }
-            .nav-links { 
-                gap: 15px; 
-                width: 100%; 
-                overflow-x: auto; 
-                padding-bottom: 5px; 
-                justify-content: flex-start;
-                -webkit-overflow-scrolling: touch;
-            }
+            .nav-links { gap: 15px; width: 100%; overflow-x: auto; padding-bottom: 5px; justify-content: flex-start; -webkit-overflow-scrolling: touch; }
             .nav-logo img { height: 30px; }
 
-            .slide { 
-                padding: 2rem 1.5rem; 
-                min-height: auto;
-                height: auto;
-                margin-bottom: 25px;
-            }
+            .slide { padding: 2rem 1.5rem; min-height: auto; height: auto; margin-bottom: 25px; }
 
             .grid-2 { grid-template-columns: 1fr; gap: 1.5rem; }
 
-            /* Fix Candidates Grid Stacking Order (1st Winner on Top) */
-            .candidates-grid { 
-                display: flex; 
-                flex-direction: column; 
-                gap: 2rem;
-                height: auto;
-            }
+            /* Fix Tag Source Size on Mobile */
+            .tag-source { font-size: 0.65rem; padding: 2px 8px; margin-top: 4px; }
+            
+            /* Fix Winner Image on Mobile */
+            .winner-portrait { max-width: 200px; margin-bottom: 1rem; }
+            #pemenang h1 { font-size: 2.5rem; } /* Kecilkan teks Congratulations di HP */
+
+            /* Stacking Order */
+            .candidates-grid { display: flex; flex-direction: column; gap: 2rem; height: auto; }
             .podium-1 { order: 1; height: auto; transform: scale(1.02); border: 2px solid var(--accent-green); }
             .podium-2 { order: 2; height: auto; }
             .podium-3 { order: 3; height: auto; }
@@ -374,7 +299,6 @@
             .footer-container { flex-direction: column; gap: 1.5rem; text-align: center; }
             .footer-socials { flex-direction: column; gap: 1rem; }
             
-            /* Text adjustments for mobile */
             .text-muted { font-size: 0.85rem; }
             .info-card div { font-size: 3rem !important; }
         }
@@ -593,11 +517,11 @@
             <div style="position: relative; z-index: 2; width: 100%; display: flex; flex-direction: column; align-items: center;">
                 <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/4056eb2e-bfa9-4f2f-8a0d-5de2b2c9a940" 
                      alt="Winner" 
-                     style="height: auto; width: 100%; max-width: 350px; border-radius: 16px; box-shadow: 0 15px 30px rgba(0,0,0,0.4); margin-bottom: 1.5rem;">
+                     class="winner-portrait">
                 
                 <h1 style="font-size: 3rem; margin-bottom: 0.5rem; background: linear-gradient(to right, #fff, #4ade80); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">CONGRATULATIONS</h1>
                 <h2 style="font-size: 1.8rem; color: var(--text-main); text-shadow: none; text-align: center;">Farel Endra & Refa</h2>
-                <p style="font-size: 1rem; color: var(--primary); font-weight: 500; letter-spacing: 1px; text-align: center;">Ketua & Wakil Ketua Himpunan Mahasiswa SI 2025</p>
+                <p style="font-size: 1rem; color: var(--primary); font-weight: 500; letter-spacing: 1px; text-align: center;">Ketua & Wakil Ketua Himpunan Mahasiswa SI 2026</p>
             </div>
         </section>
     </div>
@@ -610,7 +534,7 @@
             <div class="footer-socials">
                 <a href="https://www.instagram.com/hmsi_undika?igsh=NWhubWltdHZqMXFu" target="_blank" class="social-link">
                     <svg viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                     </svg>
                     Instagram
                 </a>
