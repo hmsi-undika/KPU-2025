@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -162,11 +163,13 @@
 <body style="background-color: #0f172a; color: #f1f5f9;">
 
     <!-- Slide 1: Title Slide -->
-    <section class="slide p-16 col center" style="background-color: #020617;">
-        <h1 class="text-5xl mb-4" style="color: #38bdf8;">Hasil Pemilu KAHIMA SI</h1>
-        <p class="text-2xl" style="color: #cbd5e1;">Periode 2025</p>
-        <p class="text-lg mt-8" style="color: #94a3b8;">Universitas Dinamika</p>
-        <p class="text-sm mt-4" style="color: #94a3b8;">3 Desember 2024</p>
+    <section class="slide p-16 col center" style="background-color: #020617; background-size: cover; background-position: center; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(2, 6, 23, 0.7);"></div>
+        <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/ebfd2939-d4e7-429c-8d29-e35e792797a1" alt="Logo HMSI" style="height: 120px; margin-bottom: 2rem; position: relative; z-index: 1;">
+        <h1 class="text-5xl mb-4" style="color: #38bdf8; position: relative; z-index: 1;">Hasil Pemilu KAHIMA SI</h1>
+        <p class="text-2xl" style="color: #cbd5e1; position: relative; z-index: 1;">Periode 2025</p>
+        <p class="text-lg mt-8" style="color: #94a3b8; position: relative; z-index: 1;">Universitas Dinamika</p>
+        <p class="text-sm mt-4" style="color: #94a3b8; position: relative; z-index: 1;">3 Desember 2025</p>
     </section>
 
     <!-- Slide 2: Metodologi Perhitungan -->
@@ -250,69 +253,72 @@
         </div>
     </section>
 
-    <!-- Slide 5: Perbandingan Komponen Skor -->
+    <!-- Slide 5: Kandidat dan Skor -->
     <section class="slide p-16 col" style="background-color: #0f172a;">
-        <h2 class="mb-6" style="color: #38bdf8;">Perbandingan Komponen Skor</h2>
-        <div class="fill-width" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-            <div style="background-color: #1e293b; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
-                <p style="color: #38bdf8; font-size: 0.9rem; margin-bottom: 0.5rem;">Farel Endra & Refa</p>
-                <p style="color: #f1f5f9; font-size: 1.1rem; margin-bottom: 0.3rem;"><strong>Voting 80%:</strong> <span style="color: #10b981;">37.31</span></p>
-                <p style="color: #f1f5f9; font-size: 1.1rem;"><strong>Perwawancara 20%:</strong> <span style="color: #f59e0b;">16.00</span></p>
+        <h2 class="mb-6" style="color: #38bdf8;">Kandidat dan Skor Akhir</h2>
+        <div class="fill-width" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; align-items: stretch;">
+            <!-- Kandidat 1: Farel Endra & Refa (Pemenang) -->
+            <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/4056eb2e-bfa9-4f2f-8a0d-5de2b2c9a940" alt="Farel Endra & Refa" style="width: 120px; height: 120px; border-radius: 12px; margin-bottom: 1rem; border: 3px solid white;">
+                <p style="color: white; font-size: 0.85rem; margin-bottom: 0.3rem;">🥇 PEMENANG</p>
+                <p style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 1rem;">Farel Endra & Refa</p>
+                <p style="color: white; font-size: 0.9rem; margin-bottom: 0.3rem;"><strong>Voting 80%:</strong> 37.31</p>
+                <p style="color: white; font-size: 0.9rem; margin-bottom: 0.8rem;"><strong>Perwawancara 20%:</strong> 16.00</p>
+                <p style="color: white; font-size: 1.4rem; font-weight: bold;">53.31</p>
             </div>
-            <div style="background-color: #1e293b; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
-                <p style="color: #38bdf8; font-size: 0.9rem; margin-bottom: 0.5rem;">Yovant & Abisai</p>
-                <p style="color: #f1f5f9; font-size: 1.1rem; margin-bottom: 0.3rem;"><strong>Voting 80%:</strong> <span style="color: #10b981;">26.15</span></p>
-                <p style="color: #f1f5f9; font-size: 1.1rem;"><strong>Perwawancara 20%:</strong> <span style="color: #f59e0b;">18.67</span></p>
+            <!-- Kandidat 2: Yovant & Abisai -->
+            <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/fa3d3490-997c-4eca-86a4-2e04778f88b6" alt="Yovant & Abisai" style="width: 120px; height: 120px; border-radius: 12px; margin-bottom: 1rem; border: 3px solid white;">
+                <p style="color: white; font-size: 0.85rem; margin-bottom: 0.3rem;">🥈 RUNNER UP</p>
+                <p style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 1rem;">Yovant & Abisai</p>
+                <p style="color: white; font-size: 0.9rem; margin-bottom: 0.3rem;"><strong>Voting 80%:</strong> 26.15</p>
+                <p style="color: white; font-size: 0.9rem; margin-bottom: 0.8rem;"><strong>Perwawancara 20%:</strong> 18.67</p>
+                <p style="color: white; font-size: 1.4rem; font-weight: bold;">44.82</p>
             </div>
-            <div style="background-color: #1e293b; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
-                <p style="color: #38bdf8; font-size: 0.9rem; margin-bottom: 0.5rem;">Farel Dimas & Moreno Timothy</p>
-                <p style="color: #f1f5f9; font-size: 1.1rem; margin-bottom: 0.3rem;"><strong>Voting 80%:</strong> <span style="color: #10b981;">16.54</span></p>
-                <p style="color: #f1f5f9; font-size: 1.1rem;"><strong>Perwawancara 20%:</strong> <span style="color: #f59e0b;">16.00</span></p>
+            <!-- Kandidat 3: Farel Dimas & Moreno -->
+            <div style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/3bacd5ce-d9bd-4ec3-9999-c626d9a6195c" alt="Farel Dimas & Moreno Timothy" style="width: 120px; height: 120px; border-radius: 12px; margin-bottom: 1rem; border: 3px solid white;">
+                <p style="color: white; font-size: 0.85rem; margin-bottom: 0.3rem;">🥉 KETIGA</p>
+                <p style="color: white; font-size: 1.1rem; font-weight: bold; margin-bottom: 1rem;">Farel Dimas & Moreno</p>
+                <p style="color: white; font-size: 0.9rem; margin-bottom: 0.3rem;"><strong>Voting 80%:</strong> 16.54</p>
+                <p style="color: white; font-size: 0.9rem; margin-bottom: 0.8rem;"><strong>Perwawancara 20%:</strong> 16.00</p>
+                <p style="color: white; font-size: 1.4rem; font-weight: bold;">32.54</p>
             </div>
         </div>
     </section>
 
-    <!-- Slide 6: Skor Total dan Ranking -->
-    <section class="slide p-16 col" style="background-color: #0f172a;">
-        <h2 class="mb-6" style="color: #38bdf8;">Skor Total (80% + 20%)</h2>
-        <div class="fill-width" style="display: flex; flex-direction: column; gap: 1.2rem; justify-content: center;">
-            <div style="background-color: #1e293b; padding: 1.5rem; border-left: 4px solid #10b981; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <div>
-                        <p style="color: #94a3b8; font-size: 0.9rem;">🥇 PEMENANG</p>
-                        <p style="color: #f1f5f9; font-size: 1.2rem; font-weight: bold;">Farel Endra & Refa</p>
-                    </div>
-                    <p style="color: #10b981; font-size: 2rem; font-weight: bold;">53.31</p>
-                </div>
+    <!-- Slide 6: Hasil Akhir dan Ucapan Selamat -->
+    <section class="slide p-16 col center" style="background-color: #0f172a; position: relative;">
+        <h2 class="mb-8" style="color: #38bdf8; font-size: 2rem;">Skor Total & Pemenang</h2>
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; width: 100%; max-width: 700px;">
+            <div style="background: linear-gradient(90deg, #10b981 0%, #059669 100%); padding: 2rem; border-radius: 12px; box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4); transform: scale(1.05);">
+                <p style="color: white; font-size: 1rem; margin-bottom: 0.5rem;">🏆 PEMENANG PEMILU KAHIMA SI 2025</p>
+                <p style="color: white; font-size: 1.8rem; font-weight: bold; margin-bottom: 0.5rem;">Farel Endra & Refa</p>
+                <p style="color: white; font-size: 2.2rem; font-weight: bold;">53.31 / 100</p>
             </div>
-            <div style="background-color: #1e293b; padding: 1.5rem; border-left: 4px solid #f59e0b; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <div>
-                        <p style="color: #94a3b8; font-size: 0.9rem;">🥈 RUNNER UP</p>
-                        <p style="color: #f1f5f9; font-size: 1.2rem; font-weight: bold;">Yovant & Abisai</p>
-                    </div>
-                    <p style="color: #f59e0b; font-size: 2rem; font-weight: bold;">44.82</p>
+            <div style="background-color: #1e293b; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); display: flex; justify-content: space-around;">
+                <div style="text-align: center;">
+                    <p style="color: #f59e0b; font-size: 1.3rem; font-weight: bold;">44.82</p>
+                    <p style="color: #cbd5e1; font-size: 0.9rem;">Yovant & Abisai</p>
                 </div>
-            </div>
-            <div style="background-color: #1e293b; padding: 1.5rem; border-left: 4px solid #ef4444; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <div>
-                        <p style="color: #94a3b8; font-size: 0.9rem;">🥉 KETIGA</p>
-                        <p style="color: #f1f5f9; font-size: 1.2rem; font-weight: bold;">Farel Dimas & Moreno Timothy</p>
-                    </div>
-                    <p style="color: #ef4444; font-size: 2rem; font-weight: bold;">32.54</p>
+                <div style="border-right: 2px solid #334155;"></div>
+                <div style="text-align: center;">
+                    <p style="color: #ef4444; font-size: 1.3rem; font-weight: bold;">32.54</p>
+                    <p style="color: #cbd5e1; font-size: 0.9rem;">Farel Dimas & Moreno</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Slide 7: Closing Slide -->
-    <section class="slide p-16 col center" style="background-color: #020617;">
-        <h1 class="text-5xl mb-6" style="color: #10b981;">🏆 Selamat!</h1>
-        <h2 class="text-3xl mb-8" style="color: #38bdf8;">Farel Endra & Refa</h2>
-        <p class="text-xl" style="color: #cbd5e1;">Terpilih menjadi Ketua dan Wakil Ketua</p>
-        <p class="text-lg mt-6" style="color: #cbd5e1;">Himpunan Mahasiswa S1 Sistem Informasi</p>
-        <p class="text-sm mt-8" style="color: #94a3b8;">Periode 2025</p>
+    <section class="slide p-16 col center" style="background-color: #020617; background-size: cover; background-position: center; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(2, 6, 23, 0.75);"></div>
+        <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/4056eb2e-bfa9-4f2f-8a0d-5de2b2c9a940" alt="Pemenang" style="height: 180px; margin-bottom: 1.5rem; border-radius: 12px; border: 4px solid #10b981; position: relative; z-index: 1; box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);">
+        <h1 class="text-5xl mb-6" style="color: #10b981; position: relative; z-index: 1;">🏆 Selamat!</h1>
+        <h2 class="text-4xl mb-8" style="color: #38bdf8; position: relative; z-index: 1;">Farel Endra & Refa</h2>
+        <p class="text-xl" style="color: #cbd5e1; position: relative; z-index: 1;">Terpilih menjadi Ketua dan Wakil Ketua</p>
+        <p class="text-lg mt-4" style="color: #cbd5e1; position: relative; z-index: 1;">Himpunan Mahasiswa S1 Sistem Informasi</p>
+        <p class="text-sm mt-6" style="color: #94a3b8; position: relative; z-index: 1;">Universitas Dinamika • Periode 2025</p>
     </section>
 
 </body>
