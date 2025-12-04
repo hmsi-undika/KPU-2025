@@ -325,14 +325,14 @@
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; height: 100%;">
                 <div class="info-card flex-col-center">
                     <div style="font-size: 4rem; font-weight: 800; color: var(--primary); text-shadow: 0 0 30px rgba(56, 189, 248, 0.4);">80%</div>
-                    <h3 style="margin-bottom: 0.5rem;">Pemungutan Suara</h3>
-                    <p style="color: var(--text-muted);">Voting Mahasiswa S1 Sistem Informasi.</p>
+                    <h3 style="margin-bottom: 0.5rem;">Jumlah Suara</h3>
+                    <p style="color: var(--text-muted);">Nilai Suara = Jumlah Vote × 0.8</p>
                     <div class="tag-source">Sumber Data: SICYCA</div>
                 </div>
                 <div class="info-card flex-col-center">
                     <div style="font-size: 4rem; font-weight: 800; color: var(--accent-gold); text-shadow: 0 0 30px rgba(251, 191, 36, 0.4);">20%</div>
                     <h3 style="margin-bottom: 0.5rem;">Poin Perwawancara</h3>
-                    <p style="color: var(--text-muted);">Akumulasi nilai panelis (Max 300 Poin).</p>
+                    <p style="color: var(--text-muted);">Nilai Wawancara = Poin Mentah × 0.2</p>
                 </div>
             </div>
         </section>
@@ -340,7 +340,7 @@
         <section id="voting" class="slide" style="justify-content: center;">
             <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem;">
                 <div>
-                    <h2>Hasil Voting (80%)</h2>
+                    <h2>Hasil Voting (Bobot 0.8)</h2>
                     <div class="tag-source" style="margin-top: -10px;">Verified by SICYCA</div>
                 </div>
                 <div style="text-align: right;">
@@ -352,7 +352,7 @@
             <div class="bar-container">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;">
                     <strong>1. Farel Dimas & Moreno</strong>
-                    <span style="color: var(--accent-red);">43 Suara (20.67%)</span>
+                    <span style="color: var(--accent-red);">34.4 (43 Vote x 0.8)</span>
                 </div>
                 <div class="progress-track">
                     <div class="progress-fill" style="background: var(--accent-red); --w: 20.67%;"></div>
@@ -362,7 +362,7 @@
             <div class="bar-container">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;">
                     <strong>2. Yovant & Abisai</strong>
-                    <span style="color: var(--accent-gold);">68 Suara (32.69%)</span>
+                    <span style="color: var(--accent-gold);">54.4 (68 Vote x 0.8)</span>
                 </div>
                 <div class="progress-track">
                     <div class="progress-fill" style="background: var(--accent-gold); --w: 32.69%;"></div>
@@ -372,7 +372,7 @@
             <div class="bar-container">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;">
                     <strong>3. Farel Endra & Refa</strong>
-                    <span style="color: var(--accent-green);">97 Suara (46.63%)</span>
+                    <span style="color: var(--accent-green);">77.6 (97 Vote x 0.8)</span>
                 </div>
                 <div class="progress-track">
                     <div class="progress-fill" style="background: var(--accent-green); --w: 46.63%; box-shadow: 0 0 15px var(--accent-green);"></div>
@@ -381,34 +381,34 @@
         </section>
 
         <section id="wawancara" class="slide" style="justify-content: center;">
-            <h2>Poin Perwawancara (20%)</h2>
+            <h2>Poin Perwawancara (Bobot 0.2)</h2>
             <table>
                 <thead>
                     <tr>
                         <th style="width: 40%;">Pasangan Calon</th>
                         <th>Poin Mentah</th>
-                        <th>Efektivitas</th>
-                        <th>Konversi (20%)</th>
+                        <th>Kalkulasi</th>
+                        <th>Nilai Akhir</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1. Farel Dimas & Moreno</td>
-                        <td style="color: var(--text-main);">227 / 300</td>
-                        <td>75.67%</td>
-                        <td style="color: var(--accent-red); font-weight: bold; font-size: 1.2rem;">15.13</td>
+                        <td style="color: var(--text-main);">227</td>
+                        <td>227 × 0.2</td>
+                        <td style="color: var(--accent-red); font-weight: bold; font-size: 1.2rem;">45.4</td>
                     </tr>
                     <tr>
                         <td>2. Yovant & Abisai</td>
-                        <td style="color: var(--text-main);">237 / 300</td>
-                        <td>79.00%</td>
-                        <td style="color: var(--accent-gold); font-weight: bold; font-size: 1.2rem;">15.80</td>
+                        <td style="color: var(--text-main);">237</td>
+                        <td>237 × 0.2</td>
+                        <td style="color: var(--accent-gold); font-weight: bold; font-size: 1.2rem;">47.4</td>
                     </tr>
                     <tr>
                         <td>3. Farel Endra & Refa</td>
-                        <td style="color: var(--text-main);">235 / 300</td>
-                        <td>78.33%</td>
-                        <td style="color: var(--primary); font-weight: bold; font-size: 1.2rem;">15.67</td>
+                        <td style="color: var(--text-main);">235</td>
+                        <td>235 × 0.2</td>
+                        <td style="color: var(--primary); font-weight: bold; font-size: 1.2rem;">47.0</td>
                     </tr>
                 </tbody>
             </table>
@@ -416,13 +416,13 @@
             <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
                 <div style="flex: 1; background: rgba(56, 189, 248, 0.1); padding: 1rem; border-left: 4px solid var(--primary); border-radius: 0 8px 8px 0;">
                     <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
-                        <strong style="color: var(--primary);">Analisis Penilaian:</strong> Paslon no. 2 memperoleh efektivitas poin tertinggi (79.00%), diikuti oleh Paslon no. 3 dengan margin sangat tipis.
+                        <strong style="color: var(--primary);">Analisis Penilaian:</strong> Paslon no. 2 memperoleh poin mentah tertinggi (237), yang menghasilkan nilai wawancara 47.4.
                     </p>
                 </div>
                 <div style="flex: 1; background: rgba(255, 255, 255, 0.05); padding: 1rem; border-radius: 8px;">
                     <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">Rumus Kalkulasi</p>
-                    <code style="font-family: monospace; color: var(--text-main); font-size: 1rem;">(Poin Mentah ÷ 300) × 20</code>
-                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">Total poin dibagi poin maksimal, dikali bobot 20%.</p>
+                    <code style="font-family: monospace; color: var(--text-main); font-size: 1rem;">Poin Mentah × 0.2</code>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">Total poin langsung dikalikan bobot 20% (0.2).</p>
                 </div>
             </div>
         </section>
@@ -435,8 +435,8 @@
                     <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/fa3d3490-997c-4eca-86a4-2e04778f88b6" alt="Yovant">
                     <h4 style="margin-bottom: 1rem;">2. Yovant & Abisai</h4>
                     <div style="width: 100%; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; margin-top: auto;">
-                        <p style="font-size: 0.8rem; color: var(--text-muted);">Voting: 26.15 + Wwc: 15.80</p>
-                        <p style="font-size: 2rem; font-weight: 700; color: var(--accent-gold);">41.95</p>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">Vote (54.4) + Wwc (47.4)</p>
+                        <p style="font-size: 2rem; font-weight: 700; color: var(--accent-gold);">101.8</p>
                     </div>
                 </div>
 
@@ -445,8 +445,8 @@
                     <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/4056eb2e-bfa9-4f2f-8a0d-5de2b2c9a940" alt="Farel">
                     <h3 style="margin-bottom: 1rem; font-size: 1.3rem;">3. Farel Endra & Refa</h3>
                     <div style="width: 100%; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; margin-top: auto;">
-                        <p style="font-size: 0.8rem; color: var(--text-muted);">Voting: 37.31 + Wwc: 15.67</p>
-                        <p style="font-size: 2.5rem; font-weight: 800; color: var(--accent-green); text-shadow: 0 0 20px rgba(16, 185, 129, 0.4);">52.97</p>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">Vote (77.6) + Wwc (47.0)</p>
+                        <p style="font-size: 2.5rem; font-weight: 800; color: var(--accent-green); text-shadow: 0 0 20px rgba(16, 185, 129, 0.4);">124.6</p>
                     </div>
                 </div>
 
@@ -455,8 +455,8 @@
                     <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/3bacd5ce-d9bd-4ec3-9999-c626d9a6195c" alt="Moreno">
                     <h4 style="margin-bottom: 1rem;">1. Farel & Moreno</h4>
                     <div style="width: 100%; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; margin-top: auto;">
-                        <p style="font-size: 0.8rem; color: var(--text-muted);">Voting: 16.54 + Wwc: 15.13</p>
-                        <p style="font-size: 2rem; font-weight: 700; color: var(--accent-red);">31.67</p>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">Vote (34.4) + Wwc (45.4)</p>
+                        <p style="font-size: 2rem; font-weight: 700; color: var(--accent-red);">79.8</p>
                     </div>
                 </div>
             </div>
@@ -467,16 +467,16 @@
             <div style="display: flex; width: 100%; gap: 1rem;">
                 <div style="flex: 1; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 16px; text-align: center;">
                     <p style="color: var(--accent-gold); font-weight: 600;">#2 Yovant & Abisai</p>
-                    <p style="font-size: 2rem; font-weight: 700;">41.95</p>
+                    <p style="font-size: 2rem; font-weight: 700;">101.8</p>
                 </div>
                 <div style="flex: 1.2; background: rgba(16, 185, 129, 0.2); border: 1px solid var(--accent-green); padding: 2rem; border-radius: 16px; text-align: center; transform: scale(1.1); box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);">
                     <p style="color: var(--accent-green); font-weight: 600; letter-spacing: 2px;">PEMENANG</p>
-                    <p style="font-size: 2.5rem; font-weight: 800;">52.97</p>
+                    <p style="font-size: 2.5rem; font-weight: 800;">124.6</p>
                     <p style="font-size: 0.9rem;">#3 Farel Endra & Refa</p>
                 </div>
                 <div style="flex: 1; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 16px; text-align: center;">
                     <p style="color: var(--accent-red); font-weight: 600;">#1 Farel & Moreno</p>
-                    <p style="font-size: 2rem; font-weight: 700;">31.67</p>
+                    <p style="font-size: 2rem; font-weight: 700;">79.8</p>
                 </div>
             </div>
         </section>
