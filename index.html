@@ -24,7 +24,7 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 100px;
+            scroll-padding-top: 80px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -40,6 +40,7 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            overflow-x: hidden; /* Mencegah scroll horizontal body */
         }
 
         /* --- NAVBAR --- */
@@ -48,8 +49,8 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 1rem 2rem;
-            background: rgba(2, 6, 23, 0.85);
+            padding: 0.8rem 1.5rem;
+            background: rgba(2, 6, 23, 0.9);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -59,7 +60,8 @@
         }
 
         .nav-container {
-            width: 960px;
+            width: 100%;
+            max-width: 960px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -68,12 +70,13 @@
         .nav-logo {
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--primary);
             text-decoration: none;
             display: flex;
             align-items: center;
             gap: 10px;
+            flex-shrink: 0;
         }
 
         .nav-links {
@@ -87,6 +90,7 @@
             font-size: 0.9rem;
             font-weight: 500;
             transition: color 0.3s;
+            white-space: nowrap;
         }
 
         .nav-links a:hover {
@@ -95,13 +99,20 @@
 
         /* --- SLIDE BASE --- */
         .container {
-            margin-top: 100px;
+            margin-top: 80px; /* Space for navbar */
             margin-bottom: 40px;
+            width: 100%;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .slide {
-            width: 960px;
-            height: 540px;
+            width: 100%;
+            max-width: 960px;
+            /* Height auto agar fit konten di HP */
+            min-height: 540px; 
             position: relative;
             background: var(--bg-card);
             backdrop-filter: blur(12px);
@@ -118,7 +129,7 @@
 
         /* --- TYPOGRAPHY --- */
         h1, h2, h3 { font-family: 'Poppins', sans-serif; letter-spacing: -0.5px; }
-        h1 { font-size: 3.5rem; background: linear-gradient(to right, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        h1 { font-size: 3.5rem; background: linear-gradient(to right, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align: center; }
         h2 { font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem; text-shadow: 0 0 20px rgba(56, 189, 248, 0.3); }
         
         /* --- COMPONENTS --- */
@@ -132,7 +143,7 @@
         .info-card:hover { transform: translateY(-5px); border-color: rgba(255, 255, 255, 0.15); }
 
         /* Progress Bar */
-        .bar-container { margin-bottom: 1.2rem; }
+        .bar-container { margin-bottom: 1.2rem; width: 100%; }
         .progress-track {
             background: rgba(255, 255, 255, 0.1);
             height: 12px;
@@ -147,8 +158,14 @@
             width: var(--w);
         }
 
-        /* Table */
-        table { width: 100%; border-collapse: separate; border-spacing: 0 8px; }
+        /* Table Responsive Wrapper */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        table { width: 100%; border-collapse: separate; border-spacing: 0 8px; min-width: 600px; /* Force scroll on small screens */ }
         th { text-align: left; padding: 12px; color: var(--text-muted); font-weight: 500; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
         td { background: var(--bg-glass); padding: 16px; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); vertical-align: middle; }
         td:first-child { border-top-left-radius: 12px; border-bottom-left-radius: 12px; border-left: 1px solid rgba(255,255,255,0.05); color: #fff; font-weight: 600; }
@@ -161,6 +178,7 @@
             gap: 1.5rem;
             height: 100%;
             align-items: flex-end;
+            width: 100%;
         }
 
         .candidate-card {
@@ -173,6 +191,7 @@
             flex-direction: column;
             align-items: center;
             transition: all 0.3s ease;
+            width: 100%;
         }
 
         .candidate-card img {
@@ -187,10 +206,11 @@
 
         /* Podium Styling */
         .podium-1 { 
-            height: 105%; 
+            height: 100%; 
             border: 1px solid rgba(16, 185, 129, 0.4);
             box-shadow: 0 0 30px rgba(16, 185, 129, 0.1);
             background: linear-gradient(180deg, rgba(16, 185, 129, 0.15) 0%, rgba(15, 23, 42, 0.8) 100%);
+            z-index: 2;
         }
         .podium-1 img { border-color: var(--accent-green); width: 120px; height: 120px; }
         
@@ -210,6 +230,7 @@
 
         /* Utility */
         .flex-col-center { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; height: 100%; width: 100%; }
         .badge {
             padding: 4px 12px;
             border-radius: 20px;
@@ -237,7 +258,7 @@
             margin-top: 8px;
         }
         
-        /* New Button Style */
+        /* Button Style */
         .btn-link {
             display: inline-flex;
             align-items: center;
@@ -252,12 +273,17 @@
             transition: all 0.3s;
             font-size: 0.9rem;
             margin-top: 1rem;
+            text-align: center;
         }
         .btn-link:hover {
             background: var(--primary);
             color: #020617;
             box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
         }
+
+        /* Summary Box */
+        .summary-box { display: flex; width: 100%; gap: 1rem; }
+        .summary-item { flex: 1; padding: 2rem; border-radius: 16px; text-align: center; }
 
         /* --- FOOTER --- */
         .footer {
@@ -271,10 +297,12 @@
         }
         
         .footer-container {
-            width: 960px;
+            width: 100%;
+            max-width: 960px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0 1rem;
         }
 
         .footer-info {
@@ -297,14 +325,58 @@
             font-size: 0.9rem;
         }
 
-        .social-link:hover {
-            color: var(--primary);
-        }
+        .social-link:hover { color: var(--primary); }
+        .social-link svg { width: 20px; height: 20px; fill: currentColor; }
 
-        .social-link svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
+        /* --- MOBILE RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.5rem; text-align: center; }
+            h3 { font-size: 1.2rem; }
+            
+            .navbar { padding: 0.5rem 1rem; }
+            .nav-container { flex-direction: column; gap: 10px; }
+            .nav-links { 
+                gap: 15px; 
+                width: 100%; 
+                overflow-x: auto; 
+                padding-bottom: 5px; 
+                justify-content: flex-start;
+                -webkit-overflow-scrolling: touch;
+            }
+            .nav-logo img { height: 30px; }
+
+            .slide { 
+                padding: 2rem 1.5rem; 
+                min-height: auto;
+                height: auto;
+                margin-bottom: 25px;
+            }
+
+            .grid-2 { grid-template-columns: 1fr; gap: 1.5rem; }
+
+            /* Fix Candidates Grid Stacking Order (1st Winner on Top) */
+            .candidates-grid { 
+                display: flex; 
+                flex-direction: column; 
+                gap: 2rem;
+                height: auto;
+            }
+            .podium-1 { order: 1; height: auto; transform: scale(1.02); border: 2px solid var(--accent-green); }
+            .podium-2 { order: 2; height: auto; }
+            .podium-3 { order: 3; height: auto; }
+
+            .summary-box { flex-direction: column; gap: 1.5rem; }
+            .summary-item { padding: 1.5rem; }
+            .summary-winner { transform: scale(1) !important; order: 1; border: 2px solid var(--accent-green); }
+            .summary-item:not(.summary-winner) { order: 2; }
+
+            .footer-container { flex-direction: column; gap: 1.5rem; text-align: center; }
+            .footer-socials { flex-direction: column; gap: 1rem; }
+            
+            /* Text adjustments for mobile */
+            .text-muted { font-size: 0.85rem; }
+            .info-card div { font-size: 3rem !important; }
         }
     </style>
 </head>
@@ -330,21 +402,21 @@
     <div class="container">
         <section id="intro" class="slide flex-col-center">
             <div class="blob" style="background: var(--primary); width: 300px; height: 300px; top: -100px; left: -50px; opacity: 0.2;"></div>
-            <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/ebfd2939-d4e7-429c-8d29-e35e792797a1" alt="Logo" style="height: 140px; margin-bottom: 2rem; position: relative; z-index: 2; drop-shadow: 0 0 20px rgba(56, 189, 248, 0.5);">
+            <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/ebfd2939-d4e7-429c-8d29-e35e792797a1" alt="Logo" style="height: 120px; margin-bottom: 2rem; position: relative; z-index: 2; drop-shadow: 0 0 20px rgba(56, 189, 248, 0.5);">
             
             <div style="position: relative; z-index: 2;">
-                <p style="color: var(--primary); letter-spacing: 4px; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Official Result</p>
+                <p style="color: var(--primary); letter-spacing: 4px; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; text-align: center; font-size: 0.9rem;">Official Result</p>
                 <h1 style="margin-bottom: 1rem; line-height: 1.1;">PEMILU KAHIMA SI</h1>
-                <p style="font-size: 1.5rem; color: var(--text-muted); font-weight: 300;">Periode 2025</p>
+                <p style="font-size: 1.2rem; color: var(--text-muted); font-weight: 300; text-align: center;">Periode 2025</p>
                 <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); width: 100%;">
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Universitas Dinamika • 3-4 Desember 2025</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); text-align: center;">Universitas Dinamika • 3-4 Desember 2025</p>
                 </div>
             </div>
         </section>
 
         <section id="metodologi" class="slide" style="justify-content: center;">
             <h2>Metodologi Perhitungan</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; height: 100%;">
+            <div class="grid-2">
                 <div class="info-card flex-col-center">
                     <div style="font-size: 4rem; font-weight: 800; color: var(--primary); text-shadow: 0 0 30px rgba(56, 189, 248, 0.4);">80%</div>
                     <h3 style="margin-bottom: 0.5rem;">Jumlah Suara</h3>
@@ -360,19 +432,19 @@
         </section>
 
         <section id="voting" class="slide" style="justify-content: center;">
-            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; flex-wrap: wrap; gap: 10px;">
                 <div>
-                    <h2>Hasil Voting (Bobot 0.8)</h2>
-                    <div class="tag-source" style="margin-top: -10px;">Verified by SICYCA</div>
+                    <h2 style="margin-bottom: 0.5rem; text-align: left;">Hasil Voting (Bobot 0.8)</h2>
+                    <div class="tag-source" style="margin-top: 0;">Verified by SICYCA</div>
                 </div>
-                <div style="text-align: right;">
+                <div style="text-align: right; width: auto;">
                     <span style="font-size: 0.9rem; color: var(--text-muted);">Total Partisipan</span>
                     <div style="font-size: 1.5rem; font-weight: 700;">208 Suara</div>
                 </div>
             </div>
 
             <div class="bar-container">
-                <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem; font-size: 0.9rem;">
                     <strong>1. Farel Dimas & Moreno</strong>
                     <span style="color: var(--accent-red);">34.4 (43 Vote x 0.8)</span>
                 </div>
@@ -382,7 +454,7 @@
             </div>
 
             <div class="bar-container">
-                <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem; font-size: 0.9rem;">
                     <strong>2. Yovant & Abisai</strong>
                     <span style="color: var(--accent-gold);">54.4 (68 Vote x 0.8)</span>
                 </div>
@@ -392,7 +464,7 @@
             </div>
 
             <div class="bar-container">
-                <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem; font-size: 0.9rem;">
                     <strong>3. Farel Endra & Refa</strong>
                     <span style="color: var(--accent-green);">77.6 (97 Vote x 0.8)</span>
                 </div>
@@ -407,51 +479,53 @@
                         <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
                         <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
                     </svg>
-                    Lihat Data Asli Voting (Google Sheets)
+                    Lihat Data Asli (Google Sheets)
                 </a>
             </div>
         </section>
 
         <section id="wawancara" class="slide" style="justify-content: center;">
             <h2>Poin Perwawancara (Bobot 0.2)</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th style="width: 40%;">Pasangan Calon</th>
-                        <th>Poin Mentah</th>
-                        <th>Kalkulasi</th>
-                        <th>Nilai Akhir</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1. Farel Dimas & Moreno</td>
-                        <td style="color: var(--text-main);">227</td>
-                        <td>227 × 0.2</td>
-                        <td style="color: var(--accent-red); font-weight: bold; font-size: 1.2rem;">45.4</td>
-                    </tr>
-                    <tr>
-                        <td>2. Yovant & Abisai</td>
-                        <td style="color: var(--text-main);">237</td>
-                        <td>237 × 0.2</td>
-                        <td style="color: var(--accent-gold); font-weight: bold; font-size: 1.2rem;">47.4</td>
-                    </tr>
-                    <tr>
-                        <td>3. Farel Endra & Refa</td>
-                        <td style="color: var(--text-main);">235</td>
-                        <td>235 × 0.2</td>
-                        <td style="color: var(--primary); font-weight: bold; font-size: 1.2rem;">47.0</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 40%;">Pasangan Calon</th>
+                            <th>Poin Mentah</th>
+                            <th>Kalkulasi</th>
+                            <th>Nilai Akhir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1. Farel Dimas & Moreno</td>
+                            <td style="color: var(--text-main);">227</td>
+                            <td>227 × 0.2</td>
+                            <td style="color: var(--accent-red); font-weight: bold; font-size: 1.1rem;">45.4</td>
+                        </tr>
+                        <tr>
+                            <td>2. Yovant & Abisai</td>
+                            <td style="color: var(--text-main);">237</td>
+                            <td>237 × 0.2</td>
+                            <td style="color: var(--accent-gold); font-weight: bold; font-size: 1.1rem;">47.4</td>
+                        </tr>
+                        <tr>
+                            <td>3. Farel Endra & Refa</td>
+                            <td style="color: var(--text-main);">235</td>
+                            <td>235 × 0.2</td>
+                            <td style="color: var(--primary); font-weight: bold; font-size: 1.1rem;">47.0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             
-            <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
-                <div style="flex: 1; background: rgba(56, 189, 248, 0.1); padding: 1rem; border-left: 4px solid var(--primary); border-radius: 0 8px 8px 0;">
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
+                <div style="background: rgba(56, 189, 248, 0.1); padding: 1rem; border-left: 4px solid var(--primary); border-radius: 0 8px 8px 0;">
                     <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
                         <strong style="color: var(--primary);">Analisis Penilaian:</strong> Paslon no. 2 memperoleh poin mentah tertinggi (237), yang menghasilkan nilai wawancara 47.4.
                     </p>
                 </div>
-                <div style="flex: 1; background: rgba(255, 255, 255, 0.05); padding: 1rem; border-radius: 8px;">
+                <div style="background: rgba(255, 255, 255, 0.05); padding: 1rem; border-radius: 8px;">
                     <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">Rumus Kalkulasi</p>
                     <code style="font-family: monospace; color: var(--text-main); font-size: 1rem;">Poin Mentah × 0.2</code>
                     <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">Total poin langsung dikalikan bobot 20% (0.2).</p>
@@ -496,17 +570,17 @@
 
         <section class="slide flex-col-center" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(2, 6, 23, 0.9) 100%);">
             <h2 style="margin-bottom: 2rem;">Ringkasan Hasil</h2>
-            <div style="display: flex; width: 100%; gap: 1rem;">
-                <div style="flex: 1; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 16px; text-align: center;">
+            <div class="summary-box">
+                <div class="summary-item" style="background: rgba(255,255,255,0.05);">
                     <p style="color: var(--accent-gold); font-weight: 600;">#2 Yovant & Abisai</p>
                     <p style="font-size: 2rem; font-weight: 700;">101.8</p>
                 </div>
-                <div style="flex: 1.2; background: rgba(16, 185, 129, 0.2); border: 1px solid var(--accent-green); padding: 2rem; border-radius: 16px; text-align: center; transform: scale(1.1); box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);">
+                <div class="summary-item summary-winner" style="background: rgba(16, 185, 129, 0.2); border: 1px solid var(--accent-green); transform: scale(1.1); box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);">
                     <p style="color: var(--accent-green); font-weight: 600; letter-spacing: 2px;">PEMENANG</p>
                     <p style="font-size: 2.5rem; font-weight: 800;">124.6</p>
                     <p style="font-size: 0.9rem;">#3 Farel Endra & Refa</p>
                 </div>
-                <div style="flex: 1; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 16px; text-align: center;">
+                <div class="summary-item" style="background: rgba(255,255,255,0.05);">
                     <p style="color: var(--accent-red); font-weight: 600;">#1 Farel & Moreno</p>
                     <p style="font-size: 2rem; font-weight: 700;">79.8</p>
                 </div>
@@ -516,14 +590,14 @@
         <section id="pemenang" class="slide flex-col-center" style="position: relative; overflow: hidden;">
             <div class="blob" style="background: var(--accent-green); width: 400px; height: 400px; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.15;"></div>
             
-            <div style="position: relative; z-index: 2;">
+            <div style="position: relative; z-index: 2; width: 100%; display: flex; flex-direction: column; align-items: center;">
                 <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/4056eb2e-bfa9-4f2f-8a0d-5de2b2c9a940" 
                      alt="Winner" 
-                     style="height: 260px; width: auto; border-radius: 16px; box-shadow: 0 15px 30px rgba(0,0,0,0.4); margin-bottom: 1.5rem;">
+                     style="height: auto; width: 100%; max-width: 350px; border-radius: 16px; box-shadow: 0 15px 30px rgba(0,0,0,0.4); margin-bottom: 1.5rem;">
                 
-                <h1 style="font-size: 4rem; margin-bottom: 0.5rem; background: linear-gradient(to right, #fff, #4ade80); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">CONGRATULATIONS</h1>
-                <h2 style="font-size: 2.5rem; color: var(--text-main); text-shadow: none;">Farel Endra & Refa</h2>
-                <p style="font-size: 1.25rem; color: var(--primary); font-weight: 500; letter-spacing: 1px;">Ketua & Wakil Ketua Himpunan Mahasiswa SI 2026</p>
+                <h1 style="font-size: 3rem; margin-bottom: 0.5rem; background: linear-gradient(to right, #fff, #4ade80); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">CONGRATULATIONS</h1>
+                <h2 style="font-size: 1.8rem; color: var(--text-main); text-shadow: none; text-align: center;">Farel Endra & Refa</h2>
+                <p style="font-size: 1rem; color: var(--primary); font-weight: 500; letter-spacing: 1px; text-align: center;">Ketua & Wakil Ketua Himpunan Mahasiswa SI 2025</p>
             </div>
         </section>
     </div>
