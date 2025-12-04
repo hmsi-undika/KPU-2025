@@ -50,7 +50,7 @@
             left: 0;
             width: 100%;
             padding: 0.8rem 1.5rem;
-            background: rgba(2, 6, 23, 0.9);
+            background: rgba(2, 6, 23, 0.95);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -243,15 +243,19 @@
         .summary-box { display: flex; width: 100%; gap: 1rem; }
         .summary-item { flex: 1; padding: 2rem; border-radius: 16px; text-align: center; }
 
-        /* Image Winner Style */
+        /* --- WINNER IMAGE FIX --- */
         .winner-portrait {
+            /* Desktop Default */
             width: 100%;
-            max-width: 320px;
+            max-width: 400px; /* Batasi lebar maksimal di desktop */
             height: auto;
             border-radius: 16px;
             box-shadow: 0 15px 30px rgba(0,0,0,0.4);
             margin-bottom: 1.5rem;
-            object-fit: contain;
+            
+            /* KUNCI AGAR TIDAK NGE-ZOOM */
+            object-fit: contain; 
+            display: block;
         }
 
         /* --- FOOTER --- */
@@ -265,8 +269,8 @@
 
         /* --- MOBILE RESPONSIVE MEDIA QUERIES --- */
         @media (max-width: 768px) {
-            h1 { font-size: 2.2rem; }
-            h2 { font-size: 1.5rem; text-align: center; }
+            h1 { font-size: 2rem; } /* Perkecil judul utama */
+            h2 { font-size: 1.4rem; text-align: center; }
             h3 { font-size: 1.2rem; }
             
             .navbar { padding: 0.5rem 1rem; }
@@ -274,16 +278,26 @@
             .nav-links { gap: 15px; width: 100%; overflow-x: auto; padding-bottom: 5px; justify-content: flex-start; -webkit-overflow-scrolling: touch; }
             .nav-logo img { height: 30px; }
 
-            .slide { padding: 2rem 1.5rem; min-height: auto; height: auto; margin-bottom: 25px; }
+            .slide { padding: 2rem 1.2rem; min-height: auto; height: auto; margin-bottom: 25px; }
 
             .grid-2 { grid-template-columns: 1fr; gap: 1.5rem; }
 
-            /* Fix Tag Source Size on Mobile */
             .tag-source { font-size: 0.65rem; padding: 2px 8px; margin-top: 4px; }
             
-            /* Fix Winner Image on Mobile */
-            .winner-portrait { max-width: 200px; margin-bottom: 1rem; }
-            #pemenang h1 { font-size: 2.5rem; } /* Kecilkan teks Congratulations di HP */
+            /* --- MOBILE SPECIFIC FIXES --- */
+            /* Perbaiki Tampilan Pemenang di HP */
+            .winner-portrait { 
+                max-width: 100%; /* Agar responsif */
+                height: auto; 
+                margin-bottom: 1rem; 
+                /* Pastikan tidak ada properti yang memaksa zoom/crop */
+            }
+            #pemenang h1 { 
+                font-size: 2rem; /* Kecilkan teks Congratulations */
+                word-wrap: break-word; /* Jaga-jaga */
+            } 
+            #pemenang h2 { font-size: 1.5rem; }
+            #pemenang p { font-size: 0.9rem; }
 
             /* Stacking Order */
             .candidates-grid { display: flex; flex-direction: column; gap: 2rem; height: auto; }
