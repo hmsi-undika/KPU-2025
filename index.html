@@ -236,6 +236,28 @@
             font-size: 0.8rem;
             margin-top: 8px;
         }
+        
+        /* New Button Style */
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--primary);
+            text-decoration: none;
+            border: 1px solid var(--primary);
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        .btn-link:hover {
+            background: var(--primary);
+            color: #020617;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+        }
 
         /* --- FOOTER --- */
         .footer {
@@ -315,7 +337,7 @@
                 <h1 style="margin-bottom: 1rem; line-height: 1.1;">PEMILU KAHIMA SI</h1>
                 <p style="font-size: 1.5rem; color: var(--text-muted); font-weight: 300;">Periode 2025</p>
                 <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); width: 100%;">
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">Universitas Dinamika • 3 Desember 2025</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Universitas Dinamika • 3-4 Desember 2025</p>
                 </div>
             </div>
         </section>
@@ -377,6 +399,16 @@
                 <div class="progress-track">
                     <div class="progress-fill" style="background: var(--accent-green); --w: 46.63%; box-shadow: 0 0 15px var(--accent-green);"></div>
                 </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+                <a href="https://docs.google.com/spreadsheets/d/1hDDA3ydl7hpWI9cYfKTgzkHv6vlSCDL71-LFtZijUHc/edit?usp=sharing" target="_blank" class="btn-link">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg>
+                    Lihat Data Asli Voting (Google Sheets)
+                </a>
             </div>
         </section>
 
